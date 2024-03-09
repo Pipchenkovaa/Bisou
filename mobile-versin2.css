@@ -41,18 +41,6 @@
         /* margin-left: 135px; */
     }
 
-    .main-photo-frame img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-
-    .main-photo-frame .main-photo-text {
-        font-size: 12px;
-        transform: translate(0%, -350%);
-        font-weight: 450;
-    }
-
     .header-main-right {
         display: inline-flex;
         justify-content:start;
@@ -89,18 +77,18 @@
 
     #delivery {
         font-size: 13px;
-        font-weight: 400;
+        font-weight: 450;
     }
     
     #delivery:hover {
         font-size: 10.5px;
         transition: all 0.55s;
-        font-weight: 450;
+        font-weight: 500;
     }
 
     .nav-menu .nav-menu-button {
         font-size: 13px;
-        font-weight: 400;
+        font-weight: 450;
         border: none;
         outline: none;
         color: #ddd;
@@ -117,14 +105,14 @@
         font-size: 11.5px;
         transition: all 0.55s;
         border-bottom: none;
-        font-weight: 450;
+        font-weight: 500;
     }
     
     .piroshka {
         background-color: #33201e;
         color: #ddd;
         font-size: 11.5px;
-        font-weight: 450;
+        font-weight: 500;
         border-bottom: 1.5px solid #ddd;
     }
 
