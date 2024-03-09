@@ -321,7 +321,7 @@ footer {
 }
 
 .menu {
-    margin-bottom: 16px; 
+    margin-bottom: 14px; 
 }
 
 .footer-menu-items a{
@@ -335,7 +335,8 @@ footer {
 }
 
 .footer-logo {
-    margin-bottom: -12px;
+    margin-bottom: -24px;
+    margin-top: -6.5px;
 }
 
 .copy-info {
