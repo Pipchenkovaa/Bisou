@@ -35,7 +35,7 @@
         display: inline;
         text-align: center;
         margin: auto;
-        width: 108px;
+        width: 110px;
         margin-top: -7.5px;
         justify-content: center;
         /* margin-left: 135px; */
@@ -222,7 +222,7 @@
     /* Уменьшить размеры текста внутри блоков класса cakes-names */
     .cakes-names {
         font-size: 12px;
-        margin-top: 10px;
+        margin-top: 9px;
         font-weight: 350;
     }
 
