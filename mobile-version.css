@@ -79,8 +79,8 @@
 
     .main-nav-bar a {
         display: inline-block;
-        font-size: 12px;
-        font-weight: 300;
+        font-size: 13px;
+        font-weight: 450;
         color: white;
         text-align: center;
         padding-top: 8px;
@@ -90,8 +90,8 @@
     }
 
     .nav-menu .nav-menu-button {
-        font-size: 12px;
-        font-weight: 300;
+        font-size: 13px;
+        font-weight: 450;
         border: none;
         outline: none;
         color: white;
@@ -107,10 +107,10 @@
     .main-nav-bar a:hover, .nav-menu:hover .nav-menu-button {
         background-color: #33201e;
         color: #ddd;
-        font-size: 10.5px;
+        font-size: 11.5px;
         transition: all 0.55s;
         border-bottom: 1.5px solid white;
-        font-weight: 450;
+        font-weight: 500;
     }
 
     .button-content {
@@ -124,8 +124,8 @@
     
     .button-content a {
         float: none;
-        font-size: 10.5px;
-        font-weight: 350;
+        font-size: 11.5px;
+        font-weight: 450;
         color: #33201e;
         padding: 10px 12px;
         text-decoration: none;
@@ -137,7 +137,8 @@
         background-color: #ddd;
         color: #33201e;
         text-decoration: none;
-        font-size: 10.5px;
+        font-size: 11.5px;
+        font-weight: 500;
         border-bottom: none;
         transition: all 0.45s;
     }
