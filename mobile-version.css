@@ -34,7 +34,8 @@
         display: inline;
         text-align: center;
         margin: auto;
-        width: 112px;
+        width: 110px;
+        margin-bottom: -3px;
 /*         margin-top: -7.5px; */
         justify-content: center;
         /* margin-left: 135px; */
