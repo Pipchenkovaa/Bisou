@@ -169,7 +169,7 @@
 
     /* Уменьшить размеры текста внутри блоков класса cakes-names */
     .cakes-names {
-        font-size: 12.5px;
+        font-size: 13px;
         margin-top: 9px;
         font-weight: 350;
     }
