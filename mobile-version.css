@@ -35,10 +35,7 @@
         text-align: center;
         margin: auto;
         width: 110px;
-        margin-bottom: -3px;
-/*         margin-top: -7.5px; */
         justify-content: center;
-        /* margin-left: 135px; */
     }
 
     .main-photo-frame img {
@@ -178,7 +175,7 @@
 
     /* Уменьшить размеры текста и кнопок внутри блоков класса cake */
     .cake .price {
-        font-size: 14px;
+        font-size: 16px;
         padding-bottom: 0px;
         font-weight: 550;
     }
@@ -190,7 +187,7 @@
     .cake .price::after {
         content: attr(hover-text);
         color: transparent;
-        font-size: 13px;
+        font-size: 15px;
         font-weight: 550;
         position: absolute;
         top: 0;
@@ -217,7 +214,7 @@
         border-bottom: none;
         background: transparent;
         font-family: 'Raleway';
-        font-size: 14px;
+        font-size: 16px;
         font-weight: 550;
     }
 
