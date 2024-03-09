@@ -184,7 +184,7 @@
 
     .grid {
         display: grid;
-        grid-template-columns: 20px 20px;
+        grid-template-columns: 22px 22px;
         grid-column-gap: 150px;
         grid-row-gap: 124px;
 
