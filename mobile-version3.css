@@ -154,7 +154,7 @@
         height: 25px;
         width: 136px;
         margin-top: 3vw;
-        font-weight: 300;
+        font-weight: 400;
     }
 
     .sort-button:hover {
@@ -168,13 +168,13 @@
         height: 25px;
         width: 136px;
         margin-top: 3vw;
-        font-weight: 300;
+        font-weight: 400;
         transition: all 0.45s;
     }
 
     .Button-sort-price span {
         border-bottom: 0.7px solid #33201e;
-        font-weight: 250;
+        font-weight: 500;
     }
     
     .Button-sort-price span:hover {
