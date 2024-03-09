@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main3-style.css">
+    <link rel="stylesheet" href="mobile-version3.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <title>Bisou/cakes.ru</title>
+</head>
+<body>
+
+    <header class="header">
+        <div class="header-main">
+            <div class="header-main-left">
+                <p class="header-main-left-hidden-about-us">
+                    <a href="#">О нас</a>
+                </p>
+                <p class="header-main-left-hidden-for-mobile-pay">
+                    <a href="#">Об оплате</a>
+                </p>
+                <p class="header-main-left-hidden-for-mobile-call">
+                    <a href="#">Позвонить</a>
+                </p>
+            </div>
+
+            <div class="bisou-logo">
+                <a href="index.html" id="logo">
+                    <img src="images/bisouLogo.png" width="220" alt="Логотип Bisou">
+                </a> 
+            </div>
+
+            <div class="header-main-right">
+                <a href="#" class="header-right-icon-telegram" target="_blank">
+                    <img src="images/telegram_icon.png" width="29" alt="Телеграмм">
+                   <!--<i class="telegram-icon">::before ?</i>-->
+                </a>
+                <a href="#" class="header-right-icon-whatsapp">
+                    <img src="images/whatsapp_icon.png" width="31" alt="Вотсапп">
+                    <!--<i class="whatsapp-icon">::before ?</i>-->
+                </a>
+                <a href="#" class="card-link-icon" data-total="0">
+                    <img src="images/basket.png" width="36" alt="Корзина">
+                    <!--<i class="icon-shop-bag">::before ?</i>-->
+                    <span id="cart-count" class="cart-link-count"></span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <div class="main-nav-bar">
+        <a href="main3.html" class="DEl" id="delivery"><p>Доставка</p></a>
+        <a href="main2.html" class="piroshka"><p>Пирожные</p></a>
+            
+        <div class="nav-menu">
+            <button class="nav-menu-button">Торты
+                <i class="arrow down"></i>
+            </button>
+            <div class="button-content">
+                <a href="#" class="NAV" id="bento">Бенто-торты</a>
+                <a href="main3.html" class="NAV">Создать свой торт</a>
+            </div>
+        </div>
+    </div>
+
+    <main>
+
+        <div class="Button-sort-price" style="display:flex; justify-content:center; align-items:center">
+            <button onclick="sortList()" class="sort-button">Сортировать по <span>цене</span></button>
+        </div>
+        <script>
+            function sortList() {
+                var list, i, switching, b, shouldSwitch, dir, switchcount = 0;
+                list = document.getElementById("sort-list");
+                switching = true;
+                dir = "asc"; // Задаем способ сортировки в восходящем порядке
+            
+                while (switching) {
+                    switching = false;
+                    b = list.getElementsByClassName("cake");
+                    for (i = 0; i < (b.length - 1); i++) {
+                        shouldSwitch = false;
+            
+                        if (dir == "asc") {
+                            if (getPrice(b[i]) > getPrice(b[i + 1])) {
+                                shouldSwitch = true;
+                                break;
+                            }
+                        } else if (dir == "desc") {
+                            if (getPrice(b[i]) < getPrice(b[i + 1])) {
+                                shouldSwitch = true;
+                                break;
+                            }
+                        }
+                    }
+                    if (shouldSwitch) {
+                        b[i].parentNode.insertBefore(b[i + 1], b[i]);
+                        switching = true;
+                        switchcount++;
+                    } else {
+                        if (switchcount == 0 && dir == "asc") {
+                            dir = "desc";
+                            switching = true;
+                        }
+                    }
+                }
+            }
+            function getPrice(cakeElement) {
+                var priceText = cakeElement.querySelector(".price").getAttribute("text");
+                var price = parseInt(priceText.replace(/[^\d]/g, ""));
+                return price;
+            }
+        </script>
+
+        <div class="grid" id="sort-list">
+
+            <div class="cake">
+                <a href="#">
+                    <img src="images/bentoCakes/monaliza.png" alt srcset="" width="250">
+                </a> 
+                <h2>
+                    <div class="cakes-names">
+                        Бенто-торт Mona Lisa
+                    </div> 
+                </h2>
+                    <button><a href="#" class="price" text="2000 ₽" hover-text="В корзину"></a></button>
+            </div>
+
+            <div class="cake">
+                <a href="#">
+                    <img src="images/bentoCakes/scharlett.png" alt srcset="" width="250">
+                </a> 
+                <h2>
+                    <div class="cakes-names">
+                        Бенто-торт Scarlett Johansson
+                    </div> 
+                </h2>
+                    <button><a href="#" class="price" text="1500 ₽" hover-text="В корзину"></a></button>
+            </div>
+
+            <div class="cake">
+                <a href="#">
+                    <img src="images/bentoCakes/monro.png" alt srcset="" width="250">
+                </a> 
+                <h2>
+                    <div class="cakes-names">
+                        Бенто-торт Marilyn Monroe
+                    </div> 
+                </h2>
+                    <button><a href="#" class="price" text="1750 ₽" hover-text="В корзину"></a></button>
+            </div>
+
+            <div class="cake">
+                <a href="#">
+                    <img src="images/bentoCakes/diana.png" alt srcset="" width="250">
+                </a> 
+                <h2>
+                    <div class="cakes-names">
+                        Бенто-торт Princess of Wales
+                    </div> 
+                </h2>
+                    <button><a href="#" class="price" text="1750 ₽" hover-text="В корзину"></a></button>
+            </div>
+
+            <div class="cake">
+                <a href="#">
+                    <img src="images/bentoCakes/cleopatra.png" alt srcset="" width="250">
+                </a> 
+                <h2>
+                    <div class="cakes-names">
+                        Бенто-торт Cleopatra
+                    </div> 
+                </h2>
+                    <button><a href="#" class="price" text="2000 ₽" hover-text="В корзину"></a></button>
+            </div>
+
+            <div class="cake">
+                <a href="#">
+                    <img src="images/bentoCakes/shakira.png" alt srcset="" width="250">
+                </a> 
+                <h2>
+                    <div class="cakes-names">
+                        Бенто-торт Shakira
+                    </div> 
+                </h2>
+                    <button><a href="#" class="price" text="1750 ₽" hover-text="В корзину"></a></button>
+            </div>
+
+            <div class="cake">
+                <a href="#">
+                    <img src="images/bentoCakes/rihanna.png" alt srcset="" width="250">
+                </a> 
+                <h2>
+                    <div class="cakes-names">
+                        Бенто-торт Rihanna
+                    </div> 
+                </h2>
+                    <button><a href="#" class="price" text="1750 ₽" hover-text="В корзину"></a></button>
+            </div>
+
+            <div class="cake">
+                <a href="#">
+                    <img src="images/bentoCakes/beyonce.png" alt srcset="" width="250">
+                </a> 
+                <h2>
+                    <div class="cakes-names">
+                        Бенто-торт Beyoncé
+                    </div> 
+                </h2>
+                    <button><a href="#" class="price" text="1750 ₽" hover-text="В корзину"></a></button>
+            </div>
+
+            <div class="cake">
+                <a href="#">
+                    <img src="images/bentoCakes/gaga.png" alt srcset="" width="250">
+                </a> 
+                <h2>
+                    <div class="cakes-names">
+                        Бенто-торт Lady GaGa
+                    </div> 
+                </h2>
+                    <button><a href="#" class="price" text="2000 ₽" hover-text="В корзину"></a></button>
+            </div>
+        </div>             
+                  
+    </main>
+
+    <footer>
+        <div class="footer-part">
+            <div class="footer-logo">
+                <img src="images/bisouLogo.png" width="220" alt="Логотип Bisou">
+            </div>
+            <div class="menu">
+                <p id="menu-item-ABOUT-US" class="footer-menu-items">
+                    <a href="#">О нас</a>
+                </p>
+                <p id="menu-item-CONTACT" class="footer-menu-items">
+                    <a href="#">Контакты</a>
+                </p>
+                <p id="menu-item-CONFIDENTIAL" class="footer-menu-items">
+                    <a href="#">Политика конфиденциальности</a>
+                </p>
+                <p id="menu-item-AGREED" class="footer-menu-items">
+                    <a href="#">Пользовательское соглашение</a>
+                </p>
+            </div>
+            <span class="copy-info">© 2024 Bisou. All rights reserved</span>
+        </div>
+    </footer>
+</body>
+</html>

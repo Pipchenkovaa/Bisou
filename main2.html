@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main2-style.css">
+    <link rel="stylesheet" href="mobile-versin2.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <title>Bisou/desserts.ru</title>
+</head>
+<body>
+
+    <header class="header">
+        <div class="header-main">
+            <div class="header-main-left">
+                <p class="header-main-left-hidden-about-us">
+                    <a href="#">О нас</a>
+                </p>
+                <p class="header-main-left-hidden-for-mobile-pay">
+                    <a href="#">Об оплате</a>
+                </p>
+                <p class="header-main-left-hidden-for-mobile-call">
+                    <a href="#">Позвонить</a>
+                </p>
+            </div>
+
+            <div class="bisou-logo">
+                <a href="index.html" id="logo">
+                    <img src="images/bisouLogo.png" width="220" 
+                    alt="Логотип Bisou">
+                </a> 
+            </div>
+
+            <div class="header-main-right">
+                <a href="#" class="header-right-icon-telegram" target="_blank">
+                    <img src="images/telegram_icon.png" width="29" alt="Телеграмм">
+                   <!--<i class="telegram-icon">::before ?</i>-->
+                </a>
+                <a href="#" class="header-right-icon-whatsapp">
+                    <img src="images/whatsapp_icon.png" width="31" alt="Вотсапп">
+                    <!--<i class="whatsapp-icon">::before ?</i>-->
+                </a>
+                <a href="#" class="card-link-icon" data-total="0">
+                    <img src="images/basket.png" width="36" alt="Корзина">
+                    <!--<i class="icon-shop-bag">::before ?</i>-->
+                    <span id="cart-count" class="cart-link-count"></span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <div class="main-nav-bar">
+        <a href="main2.html" class="DEl" id="delivery"><p>Доставка</p></a>
+        <a href="#" class="piroshka"><p>Пирожные</p></a>
+            
+        <div class="nav-menu">
+            <button class="nav-menu-button">Торты
+                <i class="arrow down"></i>
+            </button>
+            <div class="button-content">
+                <a href="main3.html" class="NAV">Бенто-торты</a>
+                <a href="main2.html" class="NAV">Создать свой торт</a>
+            </div>
+        </div>
+    </div>
+
+    <main>
+
+        <div class="Button-sort-price" style="display:flex; justify-content:center; align-items:center">
+            <button onclick="sortList()" class="sort-button">Сортировать по <span>цене</span></button>
+        </div>
+        <script>
+            function sortList() {
+                var list, i, switching, b, shouldSwitch, dir, switchcount = 0;
+                list = document.getElementById("sort-list");
+                switching = true;
+                dir = "asc"; // Задаем способ сортировки в восходящем порядке
+            
+                while (switching) {
+                    switching = false;
+                    b = list.getElementsByClassName("cake");
+                    for (i = 0; i < (b.length - 1); i++) {
+                        shouldSwitch = false;
+            
+                        if (dir == "asc") {
+                            if (getPrice(b[i]) > getPrice(b[i + 1])) {
+                                shouldSwitch = true;
+                                break;
+                            }
+                        } else if (dir == "desc") {
+                            if (getPrice(b[i]) < getPrice(b[i + 1])) {
+                                shouldSwitch = true;
+                                break;
+                            }
+                        }
+                    }
+                    if (shouldSwitch) {
+                        b[i].parentNode.insertBefore(b[i + 1], b[i]);
+                        switching = true;
+                        switchcount++;
+                    } else {
+                        if (switchcount == 0 && dir == "asc") {
+                            dir = "desc";
+                            switching = true;
+                        }
+                    }
+                }
+            }
+            function getPrice(cakeElement) {
+                var priceText = cakeElement.querySelector(".price").getAttribute("text");
+                var price = parseInt(priceText.replace(/[^\d]/g, ""));
+                return price;
+            }
+        </script>
+
+        <div class="grid" id="sort-list">
+
+            <div class="cake">
+                <a href="#">
+                    <img src="images/desserts/tiramisu.png" alt srcset="" width="250">
+                </a> 
+                <h2>
+                    <div class="cakes-names">
+                        Тирамису Tyra Marlene
+                        <!-- Тира Марлен -->
+                    </div> 
+                </h2>
+                    <button><a href="#" class="price" text="210 ₽" hover-text="В корзину"></a></button>
+            </div>
+
+            <div class="cake">
+                <a href="#">
+                    <img src="images/desserts/eclair.png" alt srcset="" width="250">
+                </a> 
+                <h2>
+                    <div class="cakes-names">
+                        Эклер Eclair Hepburn
+                        <!-- Эклер Хепберн -->
+                    </div> 
+                </h2>
+                    <button><a href="#" class="price" text="120 ₽" hover-text="В корзину"></a></button>
+            </div>
+
+            <div class="cake">
+                <a href="#">
+                    <img src="images/desserts/cheesecake.png" alt srcset="" width="250">
+                </a> 
+                <h2>
+                    <div class="cakes-names">
+                        Чизкейк Chizzy Chase
+                        <!-- Чиззи Чейз -->
+                    </div> 
+                </h2>
+                    <button><a href="#" class="price" text="200 ₽" hover-text="В корзину"></a></button>
+            </div>
+
+            <div class="cake">
+                <a href="#">
+                    <img src="images/desserts/macaroni.png" alt srcset="" width="250">
+                </a> 
+                <h2>
+                    <div class="cakes-names">
+                        Макарон Chic McCrory
+                        <!-- Шик Маккрори -->
+                    </div> 
+                </h2>
+                    <button><a href="#" class="price" text="120 ₽" hover-text="В корзину"></a></button>
+            </div>
+
+            <div class="cake">
+                <a href="#">
+                    <img src="images/desserts/muffin.png" alt srcset="" width="250">
+                </a> 
+                <h2>
+                    <div class="cakes-names">
+                        Маффин Shoko-Panettieri
+                        <!-- Шоко-Панеттьери -->
+                    </div> 
+                </h2>
+                    <button><a href="#" class="price" text="150 ₽" hover-text="В корзину"></a></button>
+            </div>
+
+            <div class="cake">
+                <a href="#">
+                    <img src="images/desserts/strudel.png" alt srcset="" width="250">
+                </a> 
+                <h2>
+                    <div class="cakes-names">
+                        Яблочный штрудель Strudelli Wood
+                        <!-- Штрудельли Вуд -->
+                    </div> 
+                </h2>
+                    <button><a href="#" class="price" text="186 ₽" hover-text="В корзину"></a></button>
+            </div>
+
+            <div class="cake">
+                <a href="#">
+                    <img src="images/desserts/fondan.png" alt srcset="" width="250">
+                </a> 
+                <h2>
+                    <div class="cakes-names">
+                        Фондан Fondant Fox
+                        <!-- Фондан Фокс -->
+                    </div> 
+                </h2>
+                    <button><a href="#" class="price" text="200 ₽" hover-text="В корзину"></a></button>
+            </div>
+
+            <div class="cake">
+                <a href="#">
+                    <img src="images/desserts/napoleon.png" alt srcset="" width="250">
+                </a> 
+                <h2>
+                    <div class="cakes-names">
+                        Наполеон Napoleon Blanchett
+                        <!-- Наполеон Бланшетт -->
+                    </div> 
+                </h2>
+                    <button><a href="#" class="price" text="280 ₽" hover-text="В корзину"></a></button>
+            </div>
+
+            <div class="cake">
+                <a href="#">
+                    <img src="images/desserts/panacota.png" alt srcset="" width="250">
+                </a> 
+                <h2>
+                    <div class="cakes-names">
+                        Пано-кота Moon Monroe
+                        <!-- Луна Монро -->
+                    </div> 
+                </h2>
+                    <button><a href="#" class="price" text="210 ₽" hover-text="В корзину"></a></button>
+            </div>
+
+            <div class="cake">
+                <a href="#">
+                    <img src="images/desserts/praga.png" alt srcset="" width="250">
+                </a> 
+                <h2>
+                    <div class="cakes-names">
+                        Прага Prague Payton
+                        <!-- Пражская Пэйтон -->
+                    </div> 
+                </h2>
+                    <button><a href="#" class="price" text="227 ₽" hover-text="В корзину"></a></button>
+            </div>
+
+            <div class="cake">
+                <a href="#">
+                    <img src="images/desserts/pavlova.png" alt srcset="" width="250">
+                </a> 
+                <h2>
+                    <div class="cakes-names">
+                        Павлова Pataki Pavlova
+                        <!-- Патаки Павлова -->
+                    </div> 
+                </h2>
+                    <button><a href="#" class="price" text="600 ₽" hover-text="В корзину"></a></button>
+            </div>
+        </div>             
+                  
+    </main>
+
+    <footer>
+        <div class="footer-part">
+            <div class="footer-logo">
+                <img src="images/bisouLogo.png" width="220" alt="Логотип Bisou">
+            </div>
+            <div class="menu">
+                <p id="menu-item-ABOUT-US" class="footer-menu-items">
+                    <a href="#">О нас</a>
+                </p>
+                <p id="menu-item-CONTACT" class="footer-menu-items">
+                    <a href="#">Контакты</a>
+                </p>
+                <p id="menu-item-CONFIDENTIAL" class="footer-menu-items">
+                    <a href="#">Политика конфиденциальности</a>
+                </p>
+                <p id="menu-item-AGREED" class="footer-menu-items">
+                    <a href="#">Пользовательское соглашение</a>
+                </p>
+            </div>
+            <span class="copy-info">© 2024 Bisou. All rights reserved</span>
+        </div>
+    </footer>
+</body>
+</html>

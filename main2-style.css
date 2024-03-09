@@ -1,0 +1,363 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+    
+html, body, .wrapper {
+    height: 100%;
+}
+
+body {
+    font-family: 'Raleway';
+    display: grid;
+    background-color: #f0f0f0;
+}
+
+.header-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 85px; 
+    background-color: #33201e; 
+}
+
+.bisou-logo {
+    flex: 1; /* занимает всю доступную ширину между элементами */
+    text-align: center;
+    margin-top: 22px;
+}
+
+.main-photo-frame brownie.png {
+    width: 100%;
+    object-fit: cover;
+}
+
+.header-main-left,
+.header-main-right {
+    flex: 1; /* занимают равную часть доступного пространства с логотипом */
+    display: inline-flex;
+    align-items: center;
+}
+
+.header-main-left {
+    justify-content: right;
+}
+
+.header-main-right {
+    justify-content: left;
+}
+
+.header-main-left a {
+    color: #ddd;
+    padding: 2px;
+    margin: 0 14px;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 300;
+    border-bottom: 1px solid #ddd;
+    transition: all 0.380s;
+}
+
+.header-main-right a {
+    display: inline;
+    color: #ddd;
+    padding: 4px;
+    margin: 0 8px;
+    transition: all 0.380s;
+}
+
+.header-main-left a:hover {
+    text-decoration: none;
+    border-bottom: none;
+    transition: all 0.4s;
+}
+
+.header-main-left-hidden-for-mobile-pay,
+.header-main-left-hidden-about-us {
+    display: inline-flex;
+    text-align: center;
+}
+
+.main-nav-bar {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #33201e;
+    font-family: 'Raleway';
+    width: 100%;
+    position: relative;
+}
+
+.main-nav-bar a {
+    display: inline-block;
+    color: #ddd;
+    text-align: center;
+    padding-top: 7px;
+    padding-bottom: 14px;
+    text-decoration: none;
+    width: 220px;
+}
+
+#delivery {
+    font-size: 21px;
+    font-weight: 300;
+}
+
+#delivery:hover {
+    font-size: 19px;
+    transition: all 0.4s;
+    font-weight: 450;
+}
+
+.nav-menu {
+    display: inline-block;
+    overflow: hidden;
+}
+
+.nav-menu .nav-menu-button {
+    font-size: 21px;
+    font-weight: 300;
+    border: none;
+    outline: none;
+    color: #ddd;
+    padding-top: 7px;
+    padding-bottom: 14px;
+    background-color: inherit;
+    font-family: inherit; 
+    margin: 0;
+    width: 220px;
+    text-align: center;
+}
+
+.main-nav-bar .NAV:hover:not(.piroshka), .nav-menu:hover .nav-menu-button {
+    font-size: 19px;
+    transition: all 0.380s;
+    border-bottom: none;
+    font-weight: 450;
+}
+
+.piroshka {
+    background-color: #33201e;
+    color: #ddd;
+    font-size: 19px;
+    font-weight: 450;
+    border-bottom: 3px solid #ddd;
+}
+
+.button-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    opacity: 0.89;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.button-content a {
+    float: none;
+    font-size: 19px;
+    font-weight: 300;
+    color: #33201e;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
+
+.button-content .NAV:hover {
+    color: #33201e;
+    background-color: #ddd;
+    text-decoration: none;
+    font-size: 19px;
+    border-bottom: none;
+    font-weight: 450;
+    transition: all 0.4s;
+}
+
+.nav-menu:hover .button-content {
+    display: block;
+    size: 100px;
+}
+
+.sort-button {
+    outline: none;
+    text-decoration: none;
+    background: transparent;
+    color: #33201e;
+    font-size: 18px;
+    border: 1.7px solid #33201e;
+    border-radius: 19px;
+    height: 42px;
+    width: 240px;
+    margin-top: 3vw;
+    font-weight: 250;
+}
+
+.sort-button:hover {
+    outline: none;
+    text-decoration: none;
+    background-color: #33201e;
+    color: #ddd;
+    font-size: 18px;
+    border: 1.7px solid #33201e;
+    border-radius: 19px;
+    height: 42px;
+    width: 240px;
+    margin-top: 3vw;
+    font-weight: 250;
+    transition: all 0.380s;
+}
+
+.Button-sort-price span {
+    border-bottom: 1.5px solid #33201e;
+    font-weight: 350;
+}
+
+.Button-sort-price span:hover {
+    color: #ddd;
+    border-bottom: 1.5px solid #ddd;
+}
+
+
+.grid {
+    display: grid;
+    grid-template-columns: 150px 150px 150px 150px;
+    margin-top: 100px;
+    grid-column-gap: 160px;
+    grid-row-gap: 170px;
+    /* grid-gap: 160px; */
+    justify-content: center;
+    margin-bottom: 135px;
+}
+
+.cake {
+    margin: -50px;
+    text-align: center;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.cake img {
+    transition: 1s; 
+    display: block; 
+}
+
+.cake img:hover {
+    transform: scale(1.03);
+}
+
+.cakes-names {
+    color: #33201e;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 300;
+    margin-top: 14px;
+    transition: all 0.380s;
+}
+
+.cake .price {
+    display: inline-block;
+    color: #33201e;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: 500;
+    margin-top: 3px;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.cake .price::before {
+    content: attr(text);
+}
+
+.cake .price::after {
+    content: attr(hover-text);
+    color: transparent;
+    font-size: 22px;
+    font-weight: 550;
+    position: absolute;
+    top: 0;
+    left: 0;
+    white-space: nowrap;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+    transform: translate(-20%, 0%);
+}
+
+.cake .price:hover::before {
+    color: transparent;
+    display: block;
+}
+
+.cake .price:hover::after {
+    color: #33201e;
+    opacity: 1;
+}
+
+.cake {
+    margin: -50px;
+    text-align: center;
+}
+
+.cake button {
+    border: 0;
+    outline: none;
+    border-bottom: none;
+    background: transparent;
+    font-family: 'Raleway';
+    font-size: 21px;
+    font-weight: 550;
+}
+
+footer {
+    text-align: center; 
+    padding: 7px; 
+    background-color: #33201e;
+    width: 100%;
+    color: #ddd;
+    font-weight: 300;
+    font-size: 16px;
+}
+
+.footer-part {
+    display: inline-block; 
+    text-align: center;
+}
+
+.menu {
+    margin-bottom: 16px; 
+}
+
+.footer-menu-items a{
+    display: inline-block; 
+    margin: 0 10px; 
+    border-bottom: 1px solid #ddd;
+}
+
+.footer-menu-items {
+    display: inline-block; 
+}
+
+.footer-logo {
+    margin-bottom: -12px;
+}
+
+.copy-info {
+    display: block;
+    margin-bottom: 6px;
+}
+
+.footer-menu-items a {
+    color: #ddd;
+    text-decoration: none;
+}
+
+.footer-menu-items a:hover {
+    text-decoration: none;
+    border-bottom: none;
+    transition: all 0.4s;
+}

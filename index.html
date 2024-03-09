@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main-style.css">
+    <link rel="stylesheet" href="mobile-version.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <title>Bisou.ru</title>
+</head>
+
+<body>
+    
+    <header class="header">
+
+        <div class="header-main">
+            <div class="header-main-left">
+                <p class="header-main-left-hidden-about-us">
+                    <a href="#">О нас</a>
+                </p>
+                <p class="header-main-left-hidden-for-mobile-pay">
+                    <a href="#">Об оплате</a>
+                </p>
+                <p class="header-main-left-hidden-for-mobile-call">
+                    <a href="#">Позвонить</a>
+                </p>
+            </div>
+
+            <div class="bisou-logo">
+                <a href="index.html" id="logo">
+                    <img src="images/bisouLogo.png" width="220" alt="Логотип Bisou">
+                </a> 
+            </div>
+
+            <div class="header-main-right">
+                <a href="#" class="header-right-icon-telegram" target="_blank">
+                    <img src="images/telegram_icon.png" width="29" alt="Телеграмм">
+                   <!--<i class="telegram-icon">::before ?</i>-->
+                </a>
+                <a href="#" class="header-right-icon-whatsapp">
+                    <img src="images/whatsapp_icon.png" width="31" alt="Вотсапп">
+                    <!--<i class="whatsapp-icon">::before ?</i>-->
+                </a>
+                <a href="#" class="card-link-icon" data-total="0">
+                    <img src="images/basket.png" width="36" alt="Корзина">
+                    <!--<i class="icon-shop-bag">::before ?</i>-->
+                    <span id="cart-count" class="cart-link-count"></span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <div class="main-nav-bar">
+        <a href="index.html"><p>Доставка</p></a>
+        <a href="main2.html"><p>Пирожные</p></a>
+            
+        <div class="nav-menu">
+            <button class="nav-menu-button">Торты
+                <i class="arrow down"></i>
+            </button>
+            <div class="button-content">
+                <a href="main3.html">Бенто-торты</a>
+                <a href="#">Создать свой торт</a>
+            </div>
+        </div>
+    </div>
+
+    <main id="content">
+        <div class="main-photo-frame">
+            <img src="images/brownie.png" class='main-background-photo' alt="Brownie immage" style="position: relative" width="100%" >
+            <div class="main-photo-text">Натуральные сладости с заботой о Вашем здоровье: <br>
+                 вкусно, полезно, без компромиссов.</div>
+        </div>
+
+        <form class="button-search" action="">
+            <input type="text" placeholder="Искать здесь...">
+            <button type="submit">
+                <i class="fa fa-2x"></i>
+            </button>
+        </form>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                var form = document.querySelector('.button-search');
+        
+                form.addEventListener('submit', function (event) {
+                    event.preventDefault(); // Предотвращаем стандартное поведение отправки формы
+                    var searchText = form.querySelector('input[type="text"]').value; // Получаем текст из поля ввода
+                    // Выполняем поиск текста на странице
+                    var foundElement = document.evaluate(
+                        '//*[contains(text(), "' + searchText + '")]', // Ищем элементы, содержащие искомый текст
+                        document, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null
+                    );
+                    if (foundElement.snapshotLength > 0) {
+                        // Если найдены соответствующие элементы, прокручиваем страницу к первому найденному элементу
+                        foundElement.snapshotItem(0).scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    } else {
+                        alert('Текст не найден на странице');
+                    }
+                });
+            });
+        </script>          
+
+        <div class="grid">
+
+            <div class="cake">
+                <a href="#">
+                    <img src="images/desserts/muffin.png" alt srcset="" width="250">
+                </a> 
+                <h2>
+                    <div class="cakes-names">
+                        Маффин Shoko-Panettieri
+                        <!-- Шоко-Панеттьери -->
+                    </div> 
+                </h2>
+                    <button><a href="#" class="price" text="150 ₽" hover-text="В корзину"></a></button>
+            </div>
+
+            <div class="cake">
+                <a href="#">
+                    <img src="images/desserts/cheesecake.png" alt srcset="" width="250">
+                </a> 
+                <h2>
+                    <div class="cakes-names">
+                        Чизкейк Chizzy Chase
+                        <!-- Чиззи Чейз -->
+                    </div> 
+                </h2>
+                    <button><a href="#" class="price" text="200 ₽" hover-text="В корзину"></a></button>
+            </div>
+
+            <div class="cake">
+                <a href="#">
+                    <img src="images/bentoCakes/gaga.png" alt srcset="" width="250">
+                </a> 
+                <h2>
+                    <div class="cakes-names">
+                        Бенто-торт Lady GaGa
+                    </div> 
+                </h2>
+                    <button><a href="#" class="price" text="2000 ₽" hover-text="В корзину"></a></button>
+            </div>
+
+            <div class="cake">
+                <a href="#">
+                    <img src="images/desserts/fondan.png" alt srcset="" width="250">
+                </a> 
+                <h2>
+                    <div class="cakes-names">
+                        Фондан Fondant Fox
+                        <!-- Фондан Фокс -->
+                    </div> 
+                </h2>
+                    <button><a href="#" class="price" text="200 ₽" hover-text="В корзину"></a></button>
+            </div>
+
+            <div class="cake">
+                <a href="#">
+                    <img src="images/bentoCakes/diana.png" alt srcset="" width="250">
+                </a> 
+                <h2>
+                    <div class="cakes-names">
+                        Бенто-торт Princess of Wales
+                    </div> 
+                </h2>
+                    <button><a href="#" class="price" text="1750 ₽" hover-text="В корзину"></a></button>
+            </div>
+
+            <div class="cake">
+                <a href="#">
+                    <img src="images/desserts/tiramisu.png" alt srcset="" width="250">
+                </a> 
+                <h2>
+                    <div class="cakes-names">
+                        Тирамису Tyra Marlene
+                        <!-- Тира Марлен -->
+                    </div> 
+                </h2>
+                    <button><a href="#" class="price" text="210 ₽" hover-text="В корзину"></a></button>
+            </div>
+
+            <div class="cake">
+                <a href="#">
+                    <img src="images/bentoCakes/rihanna.png" alt srcset="" width="250">
+                </a> 
+                <h2>
+                    <div class="cakes-names">
+                        Бенто-торт Rihanna
+                    </div> 
+                </h2>
+                    <button><a href="#" class="price" text="1750 ₽" hover-text="В корзину"></a></button>
+            </div>
+
+            <div class="cake">
+                <a href="#">
+                    <img src="images/bentoCakes/scharlett.png" alt srcset="" width="250">
+                </a> 
+                <h2>
+                    <div class="cakes-names">
+                        Бенто-торт Scarlett Johansson
+                    </div> 
+                </h2>
+                    <button><a href="#" class="price" text="1500 ₽" hover-text="В корзину"></a></button>
+            </div>
+
+            <div class="cake">
+                <a href="#">
+                    <img src="images/desserts/pavlova.png" alt srcset="" width="250">
+                </a> 
+                <h2>
+                    <div class="cakes-names">
+                        Павлова Pataki Pavlova
+                        <!-- Патаки Павлова -->
+                    </div> 
+                </h2>
+                    <button><a href="#" class="price" text="600 ₽" hover-text="В корзину"></a></button>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="footer-part">
+            <div class="footer-logo">
+                <img src="images/bisouLogo.png" width="220" alt="Логотип Bisou">
+            </div>
+            <div class="menu">
+                <p id="menu-item-ABOUT-US" class="footer-menu-items">
+                    <a href="#">О нас</a>
+                </p>
+                <p id="menu-item-CONTACT" class="footer-menu-items">
+                    <a href="#">Контакты</a>
+                </p>
+                <p id="menu-item-CONFIDENTIAL" class="footer-menu-items">
+                    <a href="#">Политика конфиденциальности</a>
+                </p>
+                <p id="menu-item-AGREED" class="footer-menu-items">
+                    <a href="#">Пользовательское соглашение</a>
+                </p>
+            </div>
+            <span class="copy-info">© 2024 Bisou. All rights reserved</span>
+        </div>
+    </footer>
+
+</body>
+</html>
