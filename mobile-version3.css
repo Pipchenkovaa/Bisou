@@ -6,7 +6,7 @@
         display:inline-flex;
         justify-content: space-between;
         align-items: center;
-        height: 70px;
+        height: 50px;
         width: 100%; 
         background-color: #33201e;
     }
@@ -35,7 +35,7 @@
         display: inline;
         text-align: center;
         margin: auto;
-        width: 107px;
+        width: 108px;
         margin-top: -7.5px;
         justify-content: center;
         /* margin-left: 135px; */
@@ -48,7 +48,7 @@
     }
 
     .main-photo-frame .main-photo-text {
-        font-size: 11px;
+        font-size: 12px;
         transform: translate(0%, -350%);
         font-weight: 450;
     }
@@ -65,7 +65,7 @@
     }
 
     .header-right-icon-telegram img {
-        width: 14px;
+        width: 13px;
     }
 
     .header-right-icon-whatsapp img {
@@ -79,12 +79,12 @@
 
     .main-nav-bar .DEl, 
     .main-nav-bar .piroshka {
-        font-size: 11px;
+        font-size: 12px;
     }
 
     .main-nav-bar .DEl:hover, 
     .main-nav-bar .piroshka:hover {
-        font-size: 9.5px;
+        font-size: 10.5px;
         transition: all 0.55s;
         font-weight: 450;
     }
@@ -101,7 +101,7 @@
 
     .nav-menu .nav-menu-button {
         color: #ddd;
-        font-size: 9.5px;
+        font-size: 10.5px;
         font-weight: 450;
         border-bottom: 1.5px solid #ddd;
         outline: none;
@@ -125,7 +125,7 @@
     
     .button-content a {
         float: none;
-        font-size: 9.5px;
+        font-size: 10.5px;
         font-weight: 350;
         color: #33201e;
         padding: 10px 12px;
@@ -143,7 +143,7 @@
         color: #33201e;
         background-color: #ddd;
         text-decoration: none;
-        font-size: 9.5px;
+        font-size: 10.5px;
         border-bottom: none;
         font-weight: 450;
         transition: all 0.55s;
@@ -272,7 +272,7 @@
         width: 100%;
         color: white;
         font-weight: 300;
-        font-size: 10px;
+        font-size: 9.5px;
     }
     
     .footer-part {
@@ -281,8 +281,8 @@
     }
 
     .menu {
-        margin-bottom: 7px; 
-        margin-top: 4px;
+        margin-bottom: 5px; 
+        margin-top: 6px;
     }
 
     .footer-menu-items a{ 
@@ -291,12 +291,12 @@
 
     .footer-logo img {
         width: 105px;
-        margin-bottom: -4px;
-        margin-top: -1.6px;
+        margin-bottom: 3px;
+        margin-top: 1px;
     }
 
     .copy-info {
         display: block;
-        margin-bottom: 3px;
+        margin-bottom: 1px;
     }
 }
