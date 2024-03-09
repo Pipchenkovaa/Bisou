@@ -88,8 +88,8 @@
     }
 
     #delivery {
-        font-size: 12px;
-        font-weight: 300;
+        font-size: 13px;
+        font-weight: 400;
     }
     
     #delivery:hover {
@@ -99,8 +99,8 @@
     }
 
     .nav-menu .nav-menu-button {
-        font-size: 12px;
-        font-weight: 300;
+        font-size: 13px;
+        font-weight: 400;
         border: none;
         outline: none;
         color: #ddd;
@@ -114,7 +114,7 @@
     }
 
     .main-nav-bar .NAV:hover:not(.piroshka), .nav-menu:hover .nav-menu-button {
-        font-size: 10.5px;
+        font-size: 11.5px;
         transition: all 0.55s;
         border-bottom: none;
         font-weight: 450;
@@ -123,7 +123,7 @@
     .piroshka {
         background-color: #33201e;
         color: #ddd;
-        font-size: 10.5px;
+        font-size: 11.5px;
         font-weight: 450;
         border-bottom: 1.5px solid #ddd;
     }
@@ -139,8 +139,8 @@
     
     .button-content a {
         float: none;
-        font-size: 10.5px;
-        font-weight: 350;
+        font-size: 11.5px;
+        font-weight: 450;
         color: #33201e;
         padding: 10px 12px;
         text-decoration: none;
@@ -153,9 +153,9 @@
         color: #33201e;
         background-color: #ddd;
         text-decoration: none;
-        font-size: 10.5px;
+        font-size: 11.5px;
         border-bottom: none;
-        font-weight: 450;
+        font-weight: 500;
         transition: all 0.55s;
     }
     
@@ -170,13 +170,13 @@
         text-decoration: none;
         background: transparent;
         color: #33201e;
-        font-size: 9.5px;
+        font-size: 10px;
         border: 1px solid #33201e;
         border-radius: 19px;
-        height: 24px;
-        width: 135px;
+        height: 25px;
+        width: 136px;
         margin-top: 3vw;
-        font-weight: 300;
+        font-weight: 400;
     }
 
     .sort-button:hover {
@@ -184,19 +184,19 @@
         text-decoration: none;
         background-color: #33201e;
         color: #ddd;
-        font-size: 9.5px;
+        font-size: 10px;
         border: 1px solid #33201e;
         border-radius: 19px;
-        height: 24px;
-        width: 135px;
+        height: 25px;
+        width: 136px;
         margin-top: 3vw;
-        font-weight: 300;
+        font-weight: 400;
         transition: all 0.45s;
     }
 
     .Button-sort-price span {
         border-bottom: 0.7px solid #33201e;
-        font-weight: 250;
+        font-weight: 500;
     }
     
     .Button-sort-price span:hover {
@@ -206,12 +206,12 @@
 
     .grid {
         display: grid;
-        grid-template-columns: 20px 20px;
+        grid-template-columns: 22px 22px;
         grid-column-gap: 150px;
         grid-row-gap: 124px;
         justify-content: center;
         margin-bottom: 100px;
-        margin-top: 70px;
+        margin-top: 75px;
     }
 
     /* Уменьшить размеры изображений внутри блоков класса cake */
@@ -221,9 +221,9 @@
 
     /* Уменьшить размеры текста внутри блоков класса cakes-names */
     .cakes-names {
-        font-size: 12.5px;
+        font-size: 13px;
         margin-top: 9px;
-        font-weight: 350;
+        font-weight: 400;
     }
 
     /* Уменьшить размеры текста и кнопок внутри блоков класса cake */
