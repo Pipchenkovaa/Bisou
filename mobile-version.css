@@ -153,6 +153,17 @@
         display: none;
     }
 
+    .popular {
+        display: inline;
+        text-align: center;
+    }
+
+    .popular h2 {
+        font-size: 12.5px;
+        font-weight: 500;
+        margin-top: -11px;
+    }
+
     .grid {
         display: grid;
         grid-template-columns: 20px 20px;
