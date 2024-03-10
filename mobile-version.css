@@ -164,6 +164,10 @@
         margin-top: -11px;
     }
 
+    #must-hidden-for-mobile {
+        display: none;
+    }
+
     .grid {
         display: grid;
         grid-template-columns: 20px 20px;
