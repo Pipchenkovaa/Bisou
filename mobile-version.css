@@ -46,9 +46,9 @@
     }
 
     .main-photo-frame .main-photo-text {
-        font-size: 12px;
+        font-size: 13px;
         transform: translate(0%, -350%);
-        font-weight: 450;
+        font-weight: 500;
     }
 
     .header-main-right {
