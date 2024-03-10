@@ -183,6 +183,10 @@ body {
     font-weight: 400;
 }
 
+.popular {
+    display: none;
+}
+
 * {box-sizing: border-box;}
 form {
   position: relative;
