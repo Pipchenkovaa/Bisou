@@ -25,7 +25,7 @@ body {
 }
 
 .bisou-logo {
-    flex: 1; /* занимает всю доступную ширину между элементами */
+    flex: 1;
     text-align: center;
     margin-top: 22px;
 }
@@ -37,7 +37,7 @@ body {
 
 .header-main-left,
 .header-main-right {
-    flex: 1; /* занимают равную часть доступного пространства с логотипом */
+    flex: 1;
     display: inline-flex;
     align-items: center;
 }
