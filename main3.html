@@ -6,10 +6,10 @@
     <link rel="stylesheet" href="main3-style.css">
     <link rel="stylesheet" href="mobile-version3.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+		<script src="./scripts/sorting.js" defer></script>
     <title>Bisou/cakes.ru</title>
 </head>
 <body>
-
     <header class="header">
         <div class="header-main">
             <div class="header-main-left">
@@ -33,25 +33,20 @@
             <div class="header-main-right">
                 <a href="#" class="header-right-icon-telegram" target="_blank">
                     <img src="images/telegram_icon.png" width="29" alt="Телеграмм">
-                   <!--<i class="telegram-icon">::before ?</i>-->
                 </a>
                 <a href="#" class="header-right-icon-whatsapp">
                     <img src="images/whatsapp_icon.png" width="31" alt="Вотсапп">
-                    <!--<i class="whatsapp-icon">::before ?</i>-->
                 </a>
                 <a href="#" class="card-link-icon" data-total="0">
                     <img src="images/basket.png" width="36" alt="Корзина">
-                    <!--<i class="icon-shop-bag">::before ?</i>-->
                     <span id="cart-count" class="cart-link-count"></span>
                 </a>
             </div>
         </div>
     </header>
-
     <div class="main-nav-bar">
         <a href="main3.html" class="DEl" id="delivery"><p>Доставка</p></a>
         <a href="main2.html" class="piroshka"><p>Пирожные</p></a>
-            
         <div class="nav-menu">
             <button class="nav-menu-button">Торты
                 <i class="arrow down"></i>
@@ -62,56 +57,10 @@
             </div>
         </div>
     </div>
-
     <main>
-
         <div class="Button-sort-price" style="display:flex; justify-content:center; align-items:center">
             <button onclick="sortList()" class="sort-button">Сортировать по <span>цене</span></button>
         </div>
-        <script>
-            function sortList() {
-                var list, i, switching, b, shouldSwitch, dir, switchcount = 0;
-                list = document.getElementById("sort-list");
-                switching = true;
-                dir = "asc"; // Задаем способ сортировки в восходящем порядке
-            
-                while (switching) {
-                    switching = false;
-                    b = list.getElementsByClassName("cake");
-                    for (i = 0; i < (b.length - 1); i++) {
-                        shouldSwitch = false;
-            
-                        if (dir == "asc") {
-                            if (getPrice(b[i]) > getPrice(b[i + 1])) {
-                                shouldSwitch = true;
-                                break;
-                            }
-                        } else if (dir == "desc") {
-                            if (getPrice(b[i]) < getPrice(b[i + 1])) {
-                                shouldSwitch = true;
-                                break;
-                            }
-                        }
-                    }
-                    if (shouldSwitch) {
-                        b[i].parentNode.insertBefore(b[i + 1], b[i]);
-                        switching = true;
-                        switchcount++;
-                    } else {
-                        if (switchcount == 0 && dir == "asc") {
-                            dir = "desc";
-                            switching = true;
-                        }
-                    }
-                }
-            }
-            function getPrice(cakeElement) {
-                var priceText = cakeElement.querySelector(".price").getAttribute("text");
-                var price = parseInt(priceText.replace(/[^\d]/g, ""));
-                return price;
-            }
-        </script>
-
         <div class="grid" id="sort-list">
 
             <div class="cake">
@@ -221,10 +170,8 @@
                 </h2>
                     <button><a href="#" class="price" text="2000 ₽" hover-text="В корзину"></a></button>
             </div>
-        </div>             
-                  
-    </main>
-
+        </div>
+		</main>
     <footer>
         <div class="footer-part">
             <div class="footer-logo">

@@ -6,13 +6,11 @@
     <link rel="stylesheet" href="main-style.css">
     <link rel="stylesheet" href="mobile-version.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+		<script src="./scripts/index.js" defer></script>
     <title>Bisou.ru</title>
 </head>
-
 <body>
-    
     <header class="header">
-
         <div class="header-main">
             <div class="header-main-left">
                 <p class="header-main-left-hidden-about-us">
@@ -35,25 +33,20 @@
             <div class="header-main-right">
                 <a href="#" class="header-right-icon-telegram" target="_blank">
                     <img src="images/telegram_icon.png" width="29" alt="Телеграмм">
-                   <!--<i class="telegram-icon">::before ?</i>-->
                 </a>
                 <a href="#" class="header-right-icon-whatsapp">
                     <img src="images/whatsapp_icon.png" width="31" alt="Вотсапп">
-                    <!--<i class="whatsapp-icon">::before ?</i>-->
                 </a>
                 <a href="#" class="card-link-icon" data-total="0">
                     <img src="images/basket.png" width="36" alt="Корзина">
-                    <!--<i class="icon-shop-bag">::before ?</i>-->
                     <span id="cart-count" class="cart-link-count"></span>
                 </a>
             </div>
         </div>
     </header>
-
     <div class="main-nav-bar">
         <a href="index.html"><p>Доставка</p></a>
         <a href="main2.html"><p>Пирожные</p></a>
-            
         <div class="nav-menu">
             <button class="nav-menu-button">Торты
                 <i class="arrow down"></i>
@@ -64,7 +57,6 @@
             </div>
         </div>
     </div>
-
     <main id="content">
         <div class="main-photo-frame">
             <img src="images/brownie.png" class='main-background-photo' alt="Brownie immage" style="position: relative" width="100%" >
@@ -82,30 +74,7 @@
                 <i class="fa fa-2x"></i>
             </button>
         </form>
-        <script>
-            document.addEventListener('DOMContentLoaded', function () {
-                var form = document.querySelector('.button-search');
-        
-                form.addEventListener('submit', function (event) {
-                    event.preventDefault(); // Предотвращаем стандартное поведение отправки формы
-                    var searchText = form.querySelector('input[type="text"]').value; // Получаем текст из поля ввода
-                    // Выполняем поиск текста на странице
-                    var foundElement = document.evaluate(
-                        '//*[contains(text(), "' + searchText + '")]', // Ищем элементы, содержащие искомый текст
-                        document, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null
-                    );
-                    if (foundElement.snapshotLength > 0) {
-                        // Если найдены соответствующие элементы, прокручиваем страницу к первому найденному элементу
-                        foundElement.snapshotItem(0).scrollIntoView({ behavior: 'smooth', block: 'start' });
-                    } else {
-                        alert('Текст не найден на странице');
-                    }
-                });
-            });
-        </script>          
-
         <div class="grid">
-
             <div class="cake">
                 <a href="#">
                     <img src="images/desserts/cheesecake.png" alt srcset="" width="250">
@@ -113,7 +82,6 @@
                 <h2>
                     <div class="cakes-names">
                         Чизкейк Chizzy Chase
-                        <!-- Чиззи Чейз -->
                     </div> 
                 </h2>
                     <button><a href="#" class="price" text="200 ₽" hover-text="В корзину"></a></button>
@@ -126,7 +94,6 @@
                 <h2>
                     <div class="cakes-names">
                         Маффин Shoko-Panettieri
-                        <!-- Шоко-Панеттьери -->
                     </div> 
                 </h2>
                     <button><a href="#" class="price" text="150 ₽" hover-text="В корзину"></a></button>
@@ -175,7 +142,6 @@
                 <h2>
                     <div class="cakes-names">
                         Фондан Fondant Fox
-                        <!-- Фондан Фокс -->
                     </div> 
                 </h2>
                     <button><a href="#" class="price" text="200 ₽" hover-text="В корзину"></a></button>
@@ -188,7 +154,6 @@
                 <h2>
                     <div class="cakes-names">
                         Прага Prague Payton
-                        <!-- Пражская Пэйтон -->
                     </div> 
                 </h2>
                     <button><a href="#" class="price" text="227 ₽" hover-text="В корзину"></a></button>
@@ -213,7 +178,6 @@
                 <h2>
                     <div class="cakes-names">
                         Павлова Pataki Pavlova
-                        <!-- Патаки Павлова -->
                     </div> 
                 </h2>
                     <button><a href="#" class="price" text="600 ₽" hover-text="В корзину"></a></button>
@@ -226,7 +190,6 @@
                 <h2>
                     <div class="cakes-names">
                         Яблочный штрудель Strudelli Wood
-                        <!-- Штрудельли Вуд -->
                     </div> 
                 </h2>
                     <button><a href="#" class="price" text="186 ₽" hover-text="В корзину"></a></button>
@@ -251,7 +214,6 @@
                 <h2>
                     <div class="cakes-names">
                         Пано-кота Moon Monroe
-                        <!-- Луна Монро -->
                     </div> 
                 </h2>
                     <button><a href="#" class="price" text="210 ₽" hover-text="В корзину"></a></button>
@@ -264,7 +226,6 @@
                 <h2>
                     <div class="cakes-names">
                         Наполеон Napoleon Blanchett
-                        <!-- Наполеон Бланшетт -->
                     </div> 
                 </h2>
                     <button><a href="#" class="price" text="280 ₽" hover-text="В корзину"></a></button>
@@ -289,7 +250,6 @@
                 <h2>
                     <div class="cakes-names">
                         Эклер Eclair Hepburn
-                        <!-- Эклер Хепберн -->
                     </div> 
                 </h2>
                     <button><a href="#" class="price" text="120 ₽" hover-text="В корзину"></a></button>
@@ -326,7 +286,6 @@
                 <h2>
                     <div class="cakes-names">
                         Макарон Chic McCrory
-                        <!-- Шик Маккрори -->
                     </div> 
                 </h2>
                     <button><a href="#" class="price" text="120 ₽" hover-text="В корзину"></a></button>
@@ -351,15 +310,12 @@
                 <h2>
                     <div class="cakes-names">
                         Тирамису Tyra Marlene
-                        <!-- Тира Марлен -->
                     </div> 
                 </h2>
                     <button><a href="#" class="price" text="210 ₽" hover-text="В корзину"></a></button>
             </div>
         </div>
-
     </main>
-
     <footer>
         <div class="footer-part">
             <div class="footer-logo">
@@ -382,6 +338,5 @@
             <span class="copy-info">© 2024 Bisou. All rights reserved</span>
         </div>
     </footer>
-
 </body>
 </html>
