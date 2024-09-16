@@ -12,7 +12,7 @@
     }
 
     .header-main-left {
-        flex: 1; /* занимают равную часть доступного пространства с логотипом */
+        flex: 1;
         display: inline-flex;
         align-items: center;
         justify-content: right;
@@ -35,7 +35,7 @@
         text-align: center;
         margin: auto;
         width: 110px;
-/*         margin-top: -7.5px; */
+        margin-top: -7.5px;
         justify-content: center;
     }
 
@@ -46,16 +46,14 @@
     }
 
     .main-photo-frame .main-photo-text {
-        font-size: 13px;
+        font-size: 12px;
         transform: translate(0%, -335%);
-        font-weight: 500;
+        font-weight: 450;
     }
 
     .header-main-right {
         display: inline-flex;
         justify-content:start;
-        /* align-items: center; */
-        padding-right: px;
     }
 
     .header-main-right a {
@@ -79,8 +77,8 @@
 
     .main-nav-bar a {
         display: inline-block;
-        font-size: 13px;
-        font-weight: 450;
+        font-size: 12px;
+        font-weight: 300;
         color: white;
         text-align: center;
         padding-top: 8px;
@@ -90,8 +88,8 @@
     }
 
     .nav-menu .nav-menu-button {
-        font-size: 13px;
-        font-weight: 450;
+        font-size: 12px;
+        font-weight: 300;
         border: none;
         outline: none;
         color: white;
@@ -107,7 +105,7 @@
     .main-nav-bar a:hover, .nav-menu:hover .nav-menu-button {
         background-color: #33201e;
         color: #ddd;
-        font-size: 11.5px;
+        font-size: 10.5px;
         transition: all 0.55s;
         border-bottom: 1.5px solid white;
         font-weight: 500;
@@ -124,8 +122,8 @@
     
     .button-content a {
         float: none;
-        font-size: 11.5px;
-        font-weight: 450;
+        font-size: 10.5px;
+        font-weight: 350;
         color: #33201e;
         padding: 10px 12px;
         text-decoration: none;
@@ -137,8 +135,7 @@
         background-color: #ddd;
         color: #33201e;
         text-decoration: none;
-        font-size: 11.5px;
-        font-weight: 500;
+        font-size: 10.5px;
         border-bottom: none;
         transition: all 0.45s;
     }
@@ -148,7 +145,6 @@
         size: 100px;
     }
 
-    /* Скрыть объект класса button-search */
     .button-search {
         display: none;
     }
@@ -164,10 +160,6 @@
         margin-top: -11px;
     }
 
-    #must-hidden-for-mobile {
-        display: none;
-    }
-
     .grid {
         display: grid;
         grid-template-columns: 20px 20px;
@@ -178,19 +170,20 @@
         margin-top: 74px;
     }
 
-    /* Уменьшить размеры изображений внутри блоков класса cake */
+    #must-hidden-for-mobile {
+        display: none;
+    }
+
     .cake img {
         width: 100%;
     }
 
-    /* Уменьшить размеры текста внутри блоков класса cakes-names */
     .cakes-names {
-        font-size: 13px;
+        font-size: 12px;
         margin-top: 9px;
         font-weight: 350;
     }
 
-    /* Уменьшить размеры текста и кнопок внутри блоков класса cake */
     .cake .price {
         font-size: 16px;
         padding-bottom: 0px;
@@ -235,7 +228,6 @@
         font-weight: 550;
     }
 
-    /* Скрыть объекты класса footer-menu-items с id "menu-item-CONFIDENTIAL" и "menu-item-AGREED" */
     #menu-item-CONFIDENTIAL, #menu-item-AGREED {
         display: none;
     }
