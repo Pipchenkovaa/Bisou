@@ -9,6 +9,7 @@ This was my first website, which was created as part of a university project foc
 
 <h3> <b> ⚙️ Structure / Структура </b> </h3>
 <li><b>«images/»</b> contains all the images and icons used in the project / папка «images» содержит все использованные в проекте изображения и иконки</li>
+<li><b>«scripts/»</b> contains all JavaScript files / папка «scripts» содержит все скрипты</li>
 
 <h3> <b> Built With / Использованные технологии </b> </h3>
 HTML5 / CSS3 / JavaScript (ES6+)
